@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio wbesite</title>
+    <link rel="stylesheet" href="style.css" />
+
+
+    <title>Image Gallery</title>
+    <style type="text/css">
+        body{
+            background-color: black;
+        }
+        .carousel-container {
+            background-color: transparent;
+            position: relative;
+            max-width: 800px;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 95px;
+            margin-bottom: 100px;
+        }
+
+        .carousel-slide {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+
+            .carousel-slide img {
+                flex: 0 0 auto;
+                width: 600px;
+                object-fit: cover;
+                scroll-snap-align: start;
+                margin-left: 100px;
+                margin-right: auto;
+                border-radius: 50px;
+            }
+
+        /*  .video-container {
+            position: relative;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 50px;
+          
+
+        }
+            .video-container video {
+                align-self: center;
+                width: 600px;
+                object-fit: cover;
+                margin: 0 auto;
+                display: block;
+                border-radius: 5px;
+            }
+
+               */
+
+        .carousel-navigation {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+
+            .carousel-navigation button {
+                background-color: transparent;
+                border: solid;
+                color: azure;
+                cursor: pointer;
+                font-size: 24px;
+                padding: 10px;
+                height: 100px;
+            }
+
+                .carousel-navigation button:focus {
+                    outline: none;
+                }
+
+                .carousel-navigation button:hover {
+                    background-color: #cccccc;
+                }
+    </style>
+
+    </head>
+<body>
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <img src="Images/20230414_145903.jpg" alt="Image 1">
+            <img src="Images/20230414_145910.jpg" alt="Image 2">
+            <img src="Images/20230414_145929.jpg" alt="Image 3">
+            <img src="Images/20230414_145949.jpg" alt="Image 4">
+            <img src="Images/20230414_150056.jpg" alt="Image 5">
+            <img src="Images/20230414_150120.jpg" alt="Image 6">
+        </div>
+        <div class="carousel-navigation">
+            <button id="prevBtn" onclick="prevSlide()">&#10094;</button>
+            <button id="nextBtn" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+    <!--- <div class="video-container">
+            <video class="vid" controls>
+                <source src="Images/20230414_145714.mp4" type="video/mp4">
+            </video>
+        </div>                                                  video too large for upload -->
+    <script type="text/javascript">
+        var slideIndex = 1;
+        showSlide(slideIndex);
+
+        function nextSlide() {
+            showSlide(slideIndex += 1);
+        }
+
+        function prevSlide() {
+            showSlide(slideIndex -= 1);
+        }
+
+        function currentSlide(n) {
+            showSlide(slideIndex = n);
+        }
+
+        function showSlide(n) {
+            var slides = document.getElementsByClassName("carousel-slide")[0].getElementsByTagName("img");
+            var navBtns = document.getElementsByClassName("carousel-navigation")[0].getElementsByTagName("button");
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (var i = 0; i < navBtns.length; i++) {
+                navBtns[i].className = navBtns[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            navBtns[slideIndex - 1].className += " active";
+        }
+    </script>
+
+</body>
+
+
+</html>
+
