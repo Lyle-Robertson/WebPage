@@ -14,20 +14,19 @@
     <canvas></canvas>
     <div id="header">
         <div class="container">
-
             <!-------navigation bar------>
-            <nav>
-                <ul id="side_menu">
-                    <li><a href="#about"> About</a></li>
-                    <li><a href="#portfolio"> Portfolio</a></li>
-                    <li><a href="#container"> Contact</a></li>
-                   
-                </ul>
-                
-            </nav>
+            
+                <nav>
+                    <ul class="navbar">
+                        <li><a href="#about"> About</a></li>
+                        <li><a href="#portfolio"> Portfolio</a></li>
+                        <li><a href="#container"> Contact</a></li>
+                    </ul>
+                </nav>
+            
             <div class="header-text">
                 <h1>Hi, I'm <span>Lyle Robertson</span>!</h1>
-                <p> Future Software Engineer!.</p>
+                <p> Future Software Engineer!</p>
 
             </div>
         </div>
@@ -38,54 +37,60 @@
     <div id="about">
         <div class="container">
             <div class="row">
-                <div class="about-column-1">
-                    <img src="Images/Profile.jpg" class="dp" />
-                </div>
-                <div class="about-column-2">
-                    <div class="container">
-                        <h1 class="sub-title" style="color:blue";>About Me</h1>
-                        <p>
-                            I believe that failure is often the greatest teacher, and so hold nothing back when trying something new. I enjoy writing tunes on my guitar when I have the time, and spending hours infront of the computer trying to learn cool (but not always useful) skills.
-                        </p>
-                        <div class="tab-titles">
-                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                            <p class="tab-links" onclick="opentab('education')">Education</p>
-                        </div>
-                        <!--------------tab titles and contents------------>
-                        <div class="tab-contents active-tab" id="skills">
-                            <ul>
-                                <li><span>Programming</span><br/>I've the the privilege of learning a number of languages, PYTHON, JAVA, mySQL , HTML5, CSS & Javascript. How I rate my understanding and skill level in these languages is highlighted below. I have familiarized myself with IDEs such as Eclipse, Pycharm, Netbeans, Visual Studio. I have also gained a good understanding of platforms like Github</li>
-                                <li><span>Intrapersonal</span><br/>I Enjoy working with others, i take critiscm well and more than anything, purely just love learning new things.</li>
-                                <li><span>Other useful skills</span><br/>I have great knowledge in all things MS. I have had experience in being a mentor, which caused me to learn patience, and how to properly communicate with others.</li>
-                            </ul>
-                        </div>
-                        <div class="tab-contents" id="experience">
-                            <ul>
-                                <li>I have got about a year and a half's worth of programming experience. In that amount of time I believe i've reached a great understanding of the languages I have engaged with'</li>
-                                <li>
-                                    <br />Most recently I had completed my first Java Desktop Application. I had written it in the the IDE Apache Netbeans.
-                                    The application was created for a company named "Ravensmead Plumbing Solutions"<br />
-                                    Initially the company were operating on a manual basis, meaning stock, sales, invoicing and the inventory was being managed manualy (being written down on sheets of paper). <br />
-                                    In steps Lyle. I then created the Point Of Sales/Inventory Manager according the to requirements of the owner and am proud to say that it is up and running at the Shop.<br />
-                                </li>
-                                
-                            </ul>
-                        </div>
-                        <div class="tab-contents" id="education">
-                            <ul>
-                                <li><span>2023</span><br />Graduated from Sofware Engineering Bootcamp at HyperionDev. The course had taught me the very basics of the skills i now know. I had managed to graduate with a 98% average.</li>
-                                <li><span>2019</span><br />ND: Mechanical Engineering (Mechatronics) - I graduated from CPUT, This was the first time i had some sort of taste of programming</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <ul class="aboutTable">
+                    <li>
+                       
+                            <img src="Images/Profile.jpg" class="dp" />
+                     
+                    </li>
+                    <li>
+                       
+                            <div class="aboutTitle">
+                                <h1 >About Me</h1>
+                                <p>
+                                    I believe that failure is often the greatest teacher, and so hold nothing back when trying something new. I enjoy writing tunes on my guitar when I have the time, and spending hours infront of the computer trying to learn cool (but not always useful) skills.
+                                </p>
+                            </div>
+                            <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                                <p class="tab-links" onclick="opentab('education')">Education</p>
+                            </div>
+                            <!--------------tab titles and contents------------>
+                            <div class="tab-contents active-tab" id="skills">
+                                <ul>
+                                    <li><span>Programming</span><br />I've the the privilege of learning a number of languages, PYTHON, JAVA, mySQL , HTML5, CSS & Javascript. How I rate my understanding and skill level in these languages is highlighted below. I have familiarized myself with IDEs such as Eclipse, Pycharm, Netbeans, Visual Studio. I have also gained a good understanding of platforms like Github</li>
+                                    <li><span>Intrapersonal</span><br />I Enjoy working with others, i take critiscm well and more than anything, purely just love learning new things.</li>
+                                    <li><span>Other useful skills</span><br />I have great knowledge in all things MS. I have had experience in being a mentor, which caused me to learn patience, and how to properly communicate with others.</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="experience">
+                                <ul>
+                                    <li>I have got about a year and a half's worth of programming experience. In that amount of time I believe i've reached a great understanding of the languages I have engaged with'</li>
+                                    <li>
+                                        <br />Most recently I had completed my first Java Desktop Application. I had written it in the the IDE Apache Netbeans.
+                                        The application was created for a company named "Ravensmead Plumbing Solutions"<br />
+                                        Initially the company were operating on a manual basis, meaning stock, sales, invoicing and the inventory was being managed manualy (being written down on sheets of paper). <br />
+                                        In steps Lyle. I then created the Point Of Sales/Inventory Manager according the to requirements of the owner and am proud to say that it is up and running at the Shop.<br />
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                    <li><span>2023</span><br />Graduated from Sofware Engineering Bootcamp at HyperionDev. The course had taught me the very basics of the skills i now know. I had managed to graduate with a 98% average.</li>
+                                    <li><span>2019</span><br />ND: Mechanical Engineering (Mechatronics) - I graduated from CPUT, This was the first time i had some sort of taste of programming</li>
+                                </ul>
+                            </div>
+                    
+                    </li>
+                </ul>
             </div>
         </div>
 
         <div class="skills">
             <div class="container">
-                <ul>
+                <ul class="skill-list">
                     <li>
                         <div class="box">
                             <div class="content">
@@ -182,6 +187,13 @@
                             </div>
                         </div>
                     </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="skills">
+            <div class="container">
+                <ul class="skill-list">
                     <li>
                         <div class="box">
                             <div class="content">
@@ -252,7 +264,7 @@
     </div>
     <!------------------portfolio------------------ -->
     <div id="portfolio">
-        <div class="projects" ;>
+        <div class="projects">
             <h1>Things I've done!</h1>
             <h2> [Click Card For Source Code]</h2>
             <div class="container">
@@ -315,7 +327,7 @@
             </div>
         </div>
 
-        <div class="projects1" ;>
+        <div class="projects">
             <div class="container">
                 <div class="card">
                     <a href="https://gitfront.io/r/user-5619450/1oHkzGcWtjcR/Capstone-Project-3-L1/ ">
@@ -377,10 +389,10 @@
             </div>
         </div>
 
-        <div class="projects2">
+        <div class="project">
             <div class="container">
                 <div class="card">
-                    <a href="https://gitfront.io/r/user-5619450/Yd1ZCaUkLV9y/Capstone-Project-1-L1">
+                    <a class="web"href="https://gitfront.io/r/user-5619450/Yd1ZCaUkLV9y/Capstone-Project-1-L1">
                         <h3 class="title">I've created this website, using HTML, CSS and JAVASCRIPT</h3>
                         <div class="bar">
                             <div class="emptybar"></div>
@@ -717,6 +729,74 @@
                 });
             });
         });
+
+
+        const issues = [];
+
+        function warn(el) {
+            // Style the detected issues
+            el.style.outline = '2px solid #FFCC00';
+            el.style.backgroundColor = '#FFCC00';
+            el.style.backgroundImage = 'linear-gradient(135deg, rgba(255,0,0,1) 0%, rgba(255,204,0,1) 35%, rgba(0,212,255,1) 100%)';
+        }
+
+        function checkScrollingAncestor(elem) {
+            if (!elem.parentElement || elem.parentElement.tagName.toLowerCase() === 'body') {
+                return false;
+            }
+
+            const computedStyle = window.getComputedStyle(elem.parentElement);
+
+            if (computedStyle.overflowX == 'auto') {
+                return true;
+            } else {
+                return checkScrollingAncestor(elem.parentElement);
+            }
+        }
+
+        function getSizedAncestor(elem) {
+            if (!elem.parentElement) {
+                return null;
+            }
+
+            if (elem.parentElement.offsetWidth > 0) {
+                return elem.parentElement;
+            } else {
+                return getSizedAncestor(elem.parentElement);
+            }
+        }
+
+        function checkElement(el) {
+            const hasScrollingAncestor = checkScrollingAncestor(el);
+            if (hasScrollingAncestor) {
+                return;
+            }
+
+            // Find elements that overflow the document width
+            if (el.offsetWidth > document.documentElement.offsetWidth) {
+                warn(el);
+                issues.push(el);
+            }
+
+            const ancestor = getSizedAncestor(el);
+            const info = window.getComputedStyle(el);
+
+            // Find any negative margins (deliberate outflow)
+            const adjustment =
+                (info.marginLeft.startsWith('-') ? parseFloat(info.marginLeft) * -1 : 0)
+                +
+                (info.marginRight.startsWith('-') ? parseFloat(info.marginRight) * -1 : 0);
+
+            if (ancestor && (el.offsetWidth - adjustment) > ancestor.offsetWidth) {
+                warn(el);
+                issues.push(el);
+            }
+        }
+
+        document.querySelectorAll('*').forEach(checkElement);
+
+        issues.length > 0 && issues[0].scrollIntoView();
+        console.log(issues);
     </script>
 </body>
 </html>
