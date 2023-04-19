@@ -20,7 +20,7 @@ body {
 	color: #ffffff;
 	background-color: black;
 	max-width: 100%;
-	
+	overflow:hidden;
 }
 
 canvas{
