@@ -614,7 +614,6 @@ canvas{
 	flex-grow: 1;
 	text-align:center;
 }
-	
 
 	@media screen and (max-width: 768px) {
 		#container {
@@ -627,7 +626,6 @@ canvas{
 		h1 {
 			font-size: 26px;
 		}
-
 		
 	}
 
