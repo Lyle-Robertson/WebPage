@@ -8,13 +8,10 @@ html{
 	scroll-behavior: smooth;
 	
 }
+
 body {
 	margin: 0;
 	padding: 0;
-	
-}
-
-body {
 	color: #ffffff;
 	background-color: black;
 	width: 100vw;
@@ -32,7 +29,6 @@ canvas{
 /*------------header----------------*/
 #header {
 	width: 100vw;
-	border:solid;
 	padding-bottom: 20%;
 	margin: 0 auto;
 	z-index: +1;
@@ -40,7 +36,6 @@ canvas{
 .container{
 	padding: 0 1em;
 	max-width: 90%;
-	border: solid;
 	margin: 0 auto;
 }
 
@@ -53,8 +48,6 @@ canvas{
 .navbar {
 	display: flex;
 	margin: 0;
-	border: solid;
-	border-color: green;
 	list-style: none;
 	gap: 4em;
 	justify-content: space-evenly;
@@ -70,8 +63,6 @@ canvas{
 		margin: 0;
 		padding: 0;
 		flex-grow: 0;
-		border: solid;
-		border-color: red;
 		z-index: +2;
 	}
 
@@ -140,7 +131,6 @@ canvas{
 #about .container{
 	margin: 0 auto;
 	width: 100%;
-	border-color: gray;
 }
 
 .dp {
@@ -152,16 +142,12 @@ canvas{
 
 .aboutTable{
 	display: flex;
-	border: solid;
-	border-color: yellow;
 	align-items: center;
 	justify-content:center;
 	width: 100%;
 }
 
 .aboutTitle{
-	border:solid;
-	border-color:deeppink;
 	text-align:center;
 	margin: 0 auto;
 	width:80%;
@@ -181,8 +167,6 @@ canvas{
 .tab-titles {
 	display: flex;
 	margin: 0;
-	border: solid;
-	border-color: darkcyan
 }
 
 
@@ -193,7 +177,6 @@ canvas{
 	font-weight: 900;
 	cursor: pointer;
 	position: relative;
-	border: dashed;
 }
 
 .tab-contents ul li {
@@ -210,8 +193,6 @@ canvas{
 }
 
 .aboutTable li {
-	border: solid;
-	border-color: green;
 	align-self: center;
 	text-wrap:normal;
 	padding: 0;
@@ -261,17 +242,13 @@ canvas{
 
 .skill-list {
 	display: flex;
-	border: solid;
-	border-color: darkmagenta;
 	justify-content: center;
 	flex-wrap: wrap;
 	list-style:none;
 }
 
 .skill-list li {
-	border: solid;
 	height: 100%;
-	border-color: orange;
 	margin:0 auto;
 	margin-top: 5%;
 }
@@ -453,7 +430,7 @@ canvas{
 	.card {
 		display: flex;
 		height: 100%;
-		width: 350px;
+		width: 400px;
 		border-radius: 10px;
 		box-shadow: -1rem 0 3rem #000;
 		/*   margin-left: -50px; */
@@ -567,18 +544,18 @@ canvas{
 	}
 
 	.card:hover {
-		transform: translateY(15px);
+		transform: translateY(50px);
 		transition: 0.4s ease-out;
 	}
 
+		.card:hover ~ .card {
+			position: relative;
+			left: 20px;
+			transition: 0.4s ease-out;
+		}
+
 }
 
-
-
-
-@media screen and (max-width: 1020px){
-
-}
 
 
 	@-webkit-keyframes animate-positive {
@@ -602,41 +579,15 @@ canvas{
 	}
 
 
-
-	button {
-		overflow: visible;
-	}
-
-	button, select {
-		text-transform: none;
-	}
-
-	button, input, select, textarea {
-		color: white;
-		font: inherit;
-		margin: 0;
-	}
-
-	input {
-		line-height: normal;
-	}
-
-	textarea {
-		overflow: auto;
-	}
-
 	#container {
 		border: solid 10px white;
 		max-width: 768px;
 		margin: 60px auto;
 		position: relative;
 		margin-top: 100px;
+		
 	}
 
-	form {
-		padding: 37.5px;
-		margin: 50px 0;
-	}
 
 	h1 {
 		color: blue;
@@ -647,132 +598,22 @@ canvas{
 		text-transform: uppercase;
 	}
 
-	.underline {
-		border-bottom: solid 5px white;
-		margin-top: 5px;
-		margin-right: auto;
-		margin-left: auto;
-		width: 80px;
-	}
 
-	.icon_wrapper {
-		margin: 50px auto 0;
-		width: 100%;
-	}
+.icons{
+	max-width: inherit;
+}
 
-	.icon {
-		display: block;
-		fill: white;
-		height: 50px;
-		margin: 0 auto;
-		width: 50px;
-	}
+.icon-list{
+	display:flex;
+	align-content:space-evenly;
+}
 
-	.email {
-		float: right;
-		width: 45%;
-	}
-
-	input[type='text'], [type='email'], select, textarea {
-		background: none;
-		border: none;
-		border-bottom: solid 5px white;
-		color: white;
-		font-size: 1.000em;
-		font-weight: 400;
-		letter-spacing: 1px;
-		margin: 0em 0 1.875em 0;
-		padding: 0 0 0.875em 0;
-		text-transform: uppercase;
-		width: 100%;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-		-webkit-transition: all 0.3s;
-		-moz-transition: all 0.3s;
-		-o-transition: all 0.3s;
-		transition: all 0.3s;
-	}
-
-		input[type='text']:focus, [type='email']:focus, textarea:focus {
-			outline: none;
-			padding: 0 0 0.875em 0;
-		}
-
-	.message {
-		float: none;
-	}
-
-	.name {
-		float: left;
-		width: 45%;
-	}
-
-	select {
-		outline: none;
-		-moz-appearance: none;
-		-webkit-appearance: none;
-	}
-
-		select::-ms-expand {
-			display: none;
-		}
-
-	.subject {
-		width: 100%;
-	}
-
-	.telephone {
-		width: 100%;
-	}
-
-	textarea {
-		line-height: 150%;
-		height: 150px;
-		resize: none;
-		width: 100%;
-	}
-
-	::-webkit-input-placeholder {
-		color: white;
-	}
-
-	:-moz-placeholder {
-		color: white;
-		opacity: 1;
-	}
-
-	::-moz-placeholder {
-		color: white;
-		opacity: 1;
-	}
-
-	:-ms-input-placeholder {
-		color: white;
-	}
-
-	#form_button {
-		background: none;
-		border: solid 5px white;
-		color: white;
-		cursor: pointer;
-		display: inline-block;
-		font-family: 'Helvetica', Arial, sans-serif;
-		font-size: 0.875em;
-		font-weight: bold;
-		outline: none;
-		padding: 20px 35px;
-		text-transform: uppercase;
-		-webkit-transition: all 0.3s;
-		-moz-transition: all 0.3s;
-		-o-transition: all 0.3s;
-		transition: all 0.3s;
-	}
-
-		#form_button:hover {
-			background: #474544;
-			color: white;
-		}
+.icon-list li{
+	list-style:none;
+	flex-grow: 1;
+	text-align:center;
+}
+	
 
 	@media screen and (max-width: 768px) {
 		#container {
@@ -786,13 +627,7 @@ canvas{
 			font-size: 26px;
 		}
 
-		.underline {
-			width: 68px;
-		}
-
-		#form_button {
-			padding: 15px 25px;
-		}
+		
 	}
 
 	@media screen and (max-width: 420px) {
@@ -805,12 +640,5 @@ canvas{
 			width: 35px;
 		}
 
-		.underline {
-			width: 53px;
-		}
-
-		input[type='text'], [type='email'], select, textarea {
-			font-size: 0.875em;
-		}
 	}
 
