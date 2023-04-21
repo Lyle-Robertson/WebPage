@@ -606,6 +606,7 @@ canvas{
 .icon-list{
 	display:flex;
 	align-content:space-evenly;
+	flex-wrap:wrap;
 }
 
 .icon-list li{
