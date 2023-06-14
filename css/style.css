@@ -205,89 +205,105 @@ span{
     color: var(--main-color);
 }
 
-
 .skills{
     /* min-height: auto; */
     padding-bottom: 7rem;
-    background: var(--bg-color);
-    justify-content: center;
-    align-items: center;
-    /* border: solid green; */
+   /*  border: solid red */
 }
 
-.skills-row{
+.skills .skills-row{
+    /* border: solid orange; */
     display: flex;
     flex-wrap: wrap;
     gap: 5rem;
-    /* border: solid white; */
-    width: 100%;
 }
 
-.title{
-    font-size: 2rem;
-    margin: 0 0 1rem;
+.skills-row .skiils-column{
+    flex:  1 1 40rem;
 }
-.skills-box{
-    /* border: solid yellow; */
-    width: 85%;
-    margin-left: 7.5%;
+
+.skiils-column .title{
+    font-size: 2.5rem;
 }
 
 .skills-box .skills-content{
     position: relative;
-    border: 0.2rem solid var(--main-color);
-    border-radius: 1rem;
-    padding: 0.5rem 1.5rem;    
+   /*  border:  0.3rem solid var(--main-color); */
+    border-radius: 0.7rem;
+    padding: 0.5 1.5rem;
+   
 }
 
 .skills-content .progress{
-    padding: 0.7rem 0;
+    padding: 1rem 0;
 }
 
 .skills-content .progress h3{
-    font-size: 1.3rem;
+    font-size:  1.7rem;
     display: flex;
     justify-content: space-between;
 }
 
 .skills-content .progress .bar{
     height: 2rem;
-    border-radius: 1rem;
-    border: 0.2rem solid var(--main-color);
-    padding: 0.25rem;
-    margin: 0.25rem 0;
+    border-radius: .6rem;
+    
 }
 
 .skills-content .progress .bar span{
     display: block;
     height: 100%;
     border-radius: 1rem;
-    background: var(--main-color);
+    background: linear-gradient(var(--second-bg-color), var(--main-color));
 }
 
-.skills-content .progress:nth-child(1) .bar span{
-    width:80%;
-}
 
-.skills-content .progress:nth-child(2) .bar span{
-    width:80%;
-}
-
-.skills-content .progress:nth-child(3) .bar span{
+.skiils-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span{
     width:90%;
 }
 
-.skills-content .progress:nth-child(4) .bar span{
+.skiils-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span{
+    width:80%;
+}
+
+.skiils-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span{
     width:90%;
 }
 
-.skills-content .progress:nth-child(5) .bar span{
-    width:87%;
+.skiils-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span{
+    width:90%;
 }
 
-.skills-content .progress:nth-child(6) .bar span{
-    width:65%;
+.skiils-column:nth-child(1) .skills-content .progress:nth-child(5) .bar span{
+    width:95%;
 }
+
+.skiils-column:nth-child(1) .skills-content .progress:nth-child(6) .bar span{
+    width:75%;
+}
+
+.skiils-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span{
+    width:100%;
+}
+
+.skiils-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span{
+    width:100%;
+}
+
+.skiils-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span{
+    width:100%;
+}
+
+.skiils-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span{
+    width:100%;
+}
+
+.skiils-column:nth-child(2) .skills-content .progress:nth-child(5) .bar span{
+    width:100%;
+}
+
+
+
 
 #projects{
     background: var(--second-bg-color);
@@ -366,17 +382,30 @@ span{
 }
 
 .contacts{
+   /*  border: solid white; */
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4,1fr);
     align-items: center;
     gap: 2.5rem;
     height: 40rem;
 }
 
+.contact-container{
+    /* border: solid orange; */
+    justify-content: center;
+}
+
 .contact-container p{
+   /*  border: solid green; */
     font-size: 1.2rem;
     text-align: center;
     flex-wrap: wrap;
+}
+
+.contact-box{
+   /*  border: solid red;  */
+    display: grid;
+    justify-content: center;
 }
 
 #li{
@@ -431,6 +460,7 @@ span{
 
     .button-box{
         display: flex;
+       /*  border:solid white; */
     }
 }
 
@@ -526,6 +556,13 @@ span{
         display: grid;
         grid-template-columns: repeat(2, 2fr);
     }
+
+    .contacts{
+       /*  border: solid yellow; */
+        height: 110%;
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+    }
 }
 
 @media(max-width:520px){
@@ -542,7 +579,12 @@ span{
    #e, #li, #w, #g{
     transform: scale(70%);
    }
-
+ 
+   .contacts{
+    transform: scale(90%);
+   /*  border: solid yellow; */
+  
+}
 }
 
 @media (max-width: 462px){
@@ -562,16 +604,13 @@ span{
     .contacts{
         transform: scale(90%);
        /*  border: solid yellow; */
-        height: 110%;
-        display: grid;
-        grid-template-columns: repeat(2, 2fr);
     }
 }
 
 @media (max-width:371px) {
     .contacts{
         transform: scale(90%);
-        border: solid yellow;
+        /* border: solid yellow; */
         height: 110%;
         display: grid;
         grid-template-columns: repeat(2, 2fr);
@@ -589,7 +628,6 @@ span{
     .container p{
         width: 80%;
         margin-left: 10%;
-        font-size: 1.2rem;
         text-align: justify;
     }
 }
