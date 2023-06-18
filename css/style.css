@@ -104,6 +104,21 @@ section{
     margin-left:5%;
 }
 
+.animated-text {
+    height:60px;
+    overflow:hidden;
+  }
+
+  .animated-text div:first-child {
+    animation: text-animation 5s infinite;
+  }
+  
+  @keyframes text-animation {
+    0% {margin-top: 0;}
+    50% {margin-top: -6rem;}
+    100% {margin-top: 0;}
+  }
+  
 .home-content .animated-text h3{
     text-align: center;
     font-size: 4rem;
@@ -111,6 +126,7 @@ section{
     color: transparent;
     -webkit-text-stroke: 0.8px var(--main-color);
 }
+
 
 .button-box{
     margin-top: 2rem;
